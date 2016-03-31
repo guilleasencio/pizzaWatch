@@ -1,15 +1,286 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="pizzaWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="105.5" alignment="left" text="¡Bienvenido al Preparador de Pizzas!" textAlignment="center" numberOfLines="0" id="bUj-NO-F5v"/>
+                        <button width="1" alignment="left" title="Crear pizza" id="KIs-xT-PX6">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="crearPizza" destination="AgC-eL-Hgc" id="dru-Lo-lyt"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="121" y="426"/>
+        </scene>
+        <!--ConfirmarPizza-->
+        <scene sceneID="Dlw-MT-LaW">
+            <objects>
+                <controller identifier="ConfirmarPizza" id="xac-Db-Txd" customClass="vistaConfirmar" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="wvx-eY-WaO">
+                            <items>
+                                <label alignment="left" text="Tamaño:" id="37L-IE-CXc"/>
+                                <label alignment="left" text="mediana" textAlignment="left" id="Bpe-gL-oTQ"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="8xb-ou-Cqh"/>
+                        <group width="1" alignment="left" id="yQW-at-zJj">
+                            <items>
+                                <label alignment="left" text="Masa:" id="Hfc-JL-Myf"/>
+                                <label alignment="left" text="crujiente" textAlignment="left" id="Zu5-SX-Tqj"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="hof-hZ-hhA"/>
+                        <group width="1" height="19.5" alignment="left" id="KWV-9Q-bEc">
+                            <items>
+                                <label alignment="left" text="Queso:" id="nr9-cH-oDu"/>
+                                <label alignment="left" text="parmesano" textAlignment="right" id="MY2-3n-c7D"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="y4a-gv-i7W"/>
+                        <label alignment="left" text="Ingredientes:" id="ANh-TV-vlu"/>
+                        <table alignment="left" id="tfm-sm-nc9">
+                            <items>
+                                <tableRow identifier="Ingrediente" id="bTd-EV-h7m" customClass="Ingrediente" customModule="pizzaWatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="0Fy-xa-vhe">
+                                        <items>
+                                            <label width="135.5" height="42.5" alignment="left" text="Ingrediente" id="SAW-1I-huZ"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredienteLabel" destination="SAW-1I-huZ" id="scA-3W-1qd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="mfZ-Du-uCp"/>
+                        <button width="1" alignment="left" title="Editar" id="mJS-kd-tPb">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAEditar" destination="xac-Db-Txd" id="VH6-f0-lJ7"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Confirmar" id="Nd0-zC-zGJ">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAConfirmado" destination="xac-Db-Txd" id="9ST-Rb-mq2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientesTabla" destination="tfm-sm-nc9" id="eg6-ls-h6D"/>
+                        <outlet property="masaLabel" destination="Zu5-SX-Tqj" id="iHL-Sh-uef"/>
+                        <outlet property="quesoLabel" destination="MY2-3n-c7D" id="2iv-GN-Sxn"/>
+                        <outlet property="tamañoLabel" destination="Bpe-gL-oTQ" id="gAV-uw-0DF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1446" y="468.75"/>
+        </scene>
+        <!--EditarPizza-->
+        <scene sceneID="RzJ-c7-29Y">
+            <objects>
+                <controller identifier="EditarPizza" id="xrE-RR-JVr" customClass="vistaEditar" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="HUa-ah-bc8">
+                            <items>
+                                <button width="136" alignment="left" title="Cambiar tamaño" id="tId-G7-bwD">
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="editarTamaño" destination="xrE-RR-JVr" id="bnv-jN-DD7"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Cambiar masa" id="SUa-jw-rCU">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editarMasa" destination="xrE-RR-JVr" id="6N0-JK-2Cm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cambiar queso" id="5tg-d9-SJB">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editarQueso" destination="xrE-RR-JVr" id="Z2z-l4-jGJ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cambiar ingredientes" id="gQZ-l8-aPa">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editarIngredientes" destination="xrE-RR-JVr" id="IxE-gF-HHc"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1678" y="281.5"/>
+        </scene>
+        <!--PedidoRealizado-->
+        <scene sceneID="Utw-kk-qXS">
+            <objects>
+                <controller identifier="PedidoRealizado" id="1ix-7C-VFn" customClass="vistaPedidoRealizado" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="103.5" alignment="left" text="¡Gracias por su pedido!" textAlignment="center" numberOfLines="0" id="h5t-tX-jnb"/>
+                        <button width="1" alignment="left" title="Pedir otra pizza" id="ujO-zx-ipt">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pedirOtraPizza" destination="1ix-7C-VFn" id="l8X-dZ-XMQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1678" y="662"/>
+        </scene>
+        <!--EditorIngredientes-->
+        <scene sceneID="0ky-jA-e5P">
+            <objects>
+                <controller identifier="EditorIngredientes" id="shE-L8-ou8" customClass="vistaIngredientes" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes:" id="Bml-Ld-eka"/>
+                        <table alignment="left" id="GzF-Ng-i1u">
+                            <items>
+                                <tableRow identifier="Ingrediente" id="DDg-5t-uCS" customClass="Ingrediente" customModule="pizzaWatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="UCR-qb-QvI">
+                                        <items>
+                                            <label width="136" height="38.5" alignment="left" text="Ingrediente" id="cZo-SL-Gpi"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredienteLabel" destination="cZo-SL-Gpi" id="l12-0J-lDf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="QdU-wq-4sy"/>
+                        <label width="136" alignment="left" text="Seleccionados: 0" textAlignment="center" id="3qv-qu-qF0"/>
+                        <separator alignment="left" id="2eM-OL-CXu"/>
+                        <label width="136" alignment="left" text="Restantes: 5" textAlignment="center" id="PgG-ii-2sW"/>
+                        <button width="1" alignment="left" title="Siguiente" id="ohc-t6-c1a">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAConfirmar" destination="shE-L8-ou8" id="QRb-iW-KQ6"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientesTable" destination="GzF-Ng-i1u" id="km1-cz-NDF"/>
+                        <outlet property="restantesLabel" destination="PgG-ii-2sW" id="FtH-en-Rwv"/>
+                        <outlet property="seleccionadosLabel" destination="3qv-qu-qF0" id="ELU-kf-9WV"/>
+                        <outlet property="siguienteBoton" destination="ohc-t6-c1a" id="gaj-6E-M1Y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1171" y="430.75"/>
+        </scene>
+        <!--EditorQueso-->
+        <scene sceneID="Mxx-e5-Sbl">
+            <objects>
+                <controller identifier="EditorQueso" id="kWS-Ma-y6H" customClass="vistaQueso" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="8yI-T4-ETK">
+                            <items>
+                                <label alignment="left" text="Queso:" id="Y7b-T5-ZEv"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="4" steps="3" id="FCL-Sl-EDK">
+                            <connections>
+                                <action selector="cambiarQueso:" destination="kWS-Ma-y6H" id="acC-vW-xeP"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="INN-n9-e1t"/>
+                        <label width="132.5" height="32.5" alignment="left" text="parmesano" textAlignment="center" id="kr7-5F-vFw"/>
+                        <button width="1" alignment="left" title="Siguiente" id="z3e-b2-pUq">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAIngredientes" destination="kWS-Ma-y6H" id="oSo-AY-8LW"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="quesoLabel" destination="kr7-5F-vFw" id="Mr1-S3-eSc"/>
+                        <outlet property="quesoSlider" destination="FCL-Sl-EDK" id="7C2-FQ-wVD"/>
+                        <outlet property="siguienteBoton" destination="z3e-b2-pUq" id="3tI-2L-S9J"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="929" y="426"/>
+        </scene>
+        <!--EditorMasa-->
+        <scene sceneID="jZJ-k9-vQk">
+            <objects>
+                <controller identifier="EditorMasa" id="Dsh-k0-Y9p" customClass="vistaMasa" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="dOw-Wk-3xS">
+                            <items>
+                                <label width="44.5" alignment="left" text="Masa:" id="vVf-Of-PVi"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="2" id="Em0-eB-aET">
+                            <connections>
+                                <action selector="cambiarMasa:" destination="Dsh-k0-Y9p" id="YF7-hO-fhB"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="OA8-px-DiG"/>
+                        <label width="136" height="32.5" alignment="left" text="crujiente" textAlignment="center" id="fVJ-hD-tRn"/>
+                        <button width="1" alignment="left" title="Siguiente" id="Qoe-12-4w8">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAQueso" destination="Dsh-k0-Y9p" id="VJp-1g-EWW"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="masaLabel" destination="fVJ-hD-tRn" id="avy-h7-cV1"/>
+                        <outlet property="masaSlider" destination="Em0-eB-aET" id="OVn-Zo-qUv"/>
+                        <outlet property="siguienteBoton" destination="Qoe-12-4w8" id="Szi-jA-162"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="679" y="426"/>
+        </scene>
+        <!--EditorTamaño-->
+        <scene sceneID="rnN-2f-yA9">
+            <objects>
+                <controller identifier="EditorTamaño" id="Xl3-YX-AA0" customClass="vistaTamano" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="AOR-Rl-vXI">
+                            <items>
+                                <label alignment="left" text="Tamaño:" id="GiF-us-knJ"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="2" id="Fks-Tb-Kjt">
+                            <connections>
+                                <action selector="cambiarTamaño:" destination="Xl3-YX-AA0" id="eSC-l9-Gyz"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="mMQ-88-6DW"/>
+                        <label width="136" height="33.5" alignment="left" text="mediana" textAlignment="center" id="743-1p-7d0"/>
+                        <button width="1" alignment="left" title="Siguiente" id="G7T-EX-VlU">
+                            <color key="backgroundColor" red="0.1107544702" green="0.64760322400000003" blue="0.28988811980000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cambiarAMasa" destination="Xl3-YX-AA0" id="EP2-Nf-ihU"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="siguienteBoton" destination="G7T-EX-VlU" id="BqH-B3-6w4"/>
+                        <outlet property="tamañoLabel" destination="743-1p-7d0" id="RlP-7a-pW8"/>
+                        <outlet property="tamañoSlider" destination="Fks-Tb-Kjt" id="egT-bs-XZI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="395" y="426"/>
         </scene>
     </scenes>
 </document>

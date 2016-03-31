@@ -13,6 +13,15 @@
 		3F2500101CAD40F40091B4E0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25000F1CAD40F40091B4E0 /* InterfaceController.swift */; };
 		3F2500121CAD40F40091B4E0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500111CAD40F40091B4E0 /* ExtensionDelegate.swift */; };
 		3F2500141CAD40F40091B4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2500131CAD40F40091B4E0 /* Assets.xcassets */; };
+		3F2500271CAD414E0091B4E0 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500261CAD414E0091B4E0 /* Pizza.swift */; };
+		3F2500291CAD57180091B4E0 /* vistaTamano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500281CAD57180091B4E0 /* vistaTamano.swift */; };
+		3F25002B1CAD6E4C0091B4E0 /* vistaMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25002A1CAD6E4C0091B4E0 /* vistaMasa.swift */; };
+		3F25002D1CAD73FD0091B4E0 /* vistaQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25002C1CAD73FD0091B4E0 /* vistaQueso.swift */; };
+		3F25002F1CAD75E60091B4E0 /* vistaIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25002E1CAD75E60091B4E0 /* vistaIngredientes.swift */; };
+		3F2500311CAD7A0C0091B4E0 /* Ingrediente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500301CAD7A0C0091B4E0 /* Ingrediente.swift */; };
+		3F2500331CAD83F10091B4E0 /* vistaConfirmar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500321CAD83F10091B4E0 /* vistaConfirmar.swift */; };
+		3F2500371CAD87890091B4E0 /* vistaEditar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500361CAD87890091B4E0 /* vistaEditar.swift */; };
+		3F2500391CAD8F380091B4E0 /* vistaPedidoRealizado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2500381CAD8F380091B4E0 /* vistaPedidoRealizado.swift */; };
 		3F25FFE21CAD40F40091B4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FFE11CAD40F40091B4E0 /* AppDelegate.swift */; };
 		3F25FFE41CAD40F40091B4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FFE31CAD40F40091B4E0 /* ViewController.swift */; };
 		3F25FFE71CAD40F40091B4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25FFE51CAD40F40091B4E0 /* Main.storyboard */; };
@@ -80,6 +89,15 @@
 		3F2500111CAD40F40091B4E0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		3F2500131CAD40F40091B4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F2500151CAD40F40091B4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F2500261CAD414E0091B4E0 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		3F2500281CAD57180091B4E0 /* vistaTamano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaTamano.swift; sourceTree = "<group>"; };
+		3F25002A1CAD6E4C0091B4E0 /* vistaMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaMasa.swift; sourceTree = "<group>"; };
+		3F25002C1CAD73FD0091B4E0 /* vistaQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaQueso.swift; sourceTree = "<group>"; };
+		3F25002E1CAD75E60091B4E0 /* vistaIngredientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaIngredientes.swift; sourceTree = "<group>"; };
+		3F2500301CAD7A0C0091B4E0 /* Ingrediente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingrediente.swift; sourceTree = "<group>"; };
+		3F2500321CAD83F10091B4E0 /* vistaConfirmar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaConfirmar.swift; sourceTree = "<group>"; };
+		3F2500361CAD87890091B4E0 /* vistaEditar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaEditar.swift; sourceTree = "<group>"; };
+		3F2500381CAD8F380091B4E0 /* vistaPedidoRealizado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaPedidoRealizado.swift; sourceTree = "<group>"; };
 		3F25FFDE1CAD40F40091B4E0 /* pizzaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizzaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F25FFE11CAD40F40091B4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F25FFE31CAD40F40091B4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +143,15 @@
 				3F2500111CAD40F40091B4E0 /* ExtensionDelegate.swift */,
 				3F2500131CAD40F40091B4E0 /* Assets.xcassets */,
 				3F2500151CAD40F40091B4E0 /* Info.plist */,
+				3F2500261CAD414E0091B4E0 /* Pizza.swift */,
+				3F2500281CAD57180091B4E0 /* vistaTamano.swift */,
+				3F25002A1CAD6E4C0091B4E0 /* vistaMasa.swift */,
+				3F25002C1CAD73FD0091B4E0 /* vistaQueso.swift */,
+				3F25002E1CAD75E60091B4E0 /* vistaIngredientes.swift */,
+				3F2500321CAD83F10091B4E0 /* vistaConfirmar.swift */,
+				3F2500301CAD7A0C0091B4E0 /* Ingrediente.swift */,
+				3F2500361CAD87890091B4E0 /* vistaEditar.swift */,
+				3F2500381CAD8F380091B4E0 /* vistaPedidoRealizado.swift */,
 			);
 			path = "pizzaWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -349,8 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2500331CAD83F10091B4E0 /* vistaConfirmar.swift in Sources */,
 				3F2500121CAD40F40091B4E0 /* ExtensionDelegate.swift in Sources */,
 				3F2500101CAD40F40091B4E0 /* InterfaceController.swift in Sources */,
+				3F2500271CAD414E0091B4E0 /* Pizza.swift in Sources */,
+				3F25002D1CAD73FD0091B4E0 /* vistaQueso.swift in Sources */,
+				3F25002B1CAD6E4C0091B4E0 /* vistaMasa.swift in Sources */,
+				3F2500291CAD57180091B4E0 /* vistaTamano.swift in Sources */,
+				3F2500311CAD7A0C0091B4E0 /* Ingrediente.swift in Sources */,
+				3F2500371CAD87890091B4E0 /* vistaEditar.swift in Sources */,
+				3F25002F1CAD75E60091B4E0 /* vistaIngredientes.swift in Sources */,
+				3F2500391CAD8F380091B4E0 /* vistaPedidoRealizado.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

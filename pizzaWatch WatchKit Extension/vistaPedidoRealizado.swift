@@ -1,6 +1,6 @@
 //
-//  InterfaceController.swift
-//  pizzaWatch WatchKit Extension
+//  vistaPedidoRealizado.swift
+//  pizzaWatch
 //
 //  Created by Guillermo Asencio Sanchez on 31/3/16.
 //  Copyright © 2016 Guillermo Asencio Sanchez. All rights reserved.
@@ -10,10 +10,9 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class vistaPedidoRealizado: WKInterfaceController {
     
     var pizza: Pizza = Pizza()
-
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -30,7 +29,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    @IBAction func crearPizza() {
+    @IBAction func pedirOtraPizza() {
         self.pizza = Pizza()
         pushControllerWithName("EditorTamaño", context: pizza)
     }

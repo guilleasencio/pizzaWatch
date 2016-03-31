@@ -5,6 +5,50 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+               BuildableName = "pizzaWatch WatchKit App.app"
+               BlueprintName = "pizzaWatch WatchKit App"
+               ReferencedContainer = "container:pizzaWatch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F25FFDD1CAD40F40091B4E0"
+               BuildableName = "pizzaWatch.app"
+               BlueprintName = "pizzaWatch"
+               ReferencedContainer = "container:pizzaWatch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F2500091CAD40F40091B4E0"
+               BuildableName = "pizzaWatch WatchKit Extension.appex"
+               BlueprintName = "pizzaWatch WatchKit Extension"
+               ReferencedContainer = "container:pizzaWatch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -13,6 +57,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+            BuildableName = "pizzaWatch WatchKit App.app"
+            BlueprintName = "pizzaWatch WatchKit App"
+            ReferencedContainer = "container:pizzaWatch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +79,27 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/pizzaWatch WatchKit App">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+            BuildableName = "pizzaWatch WatchKit App.app"
+            BlueprintName = "pizzaWatch WatchKit App"
+            ReferencedContainer = "container:pizzaWatch.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+            BuildableName = "pizzaWatch WatchKit App.app"
+            BlueprintName = "pizzaWatch WatchKit App"
+            ReferencedContainer = "container:pizzaWatch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +109,27 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/pizzaWatch WatchKit App">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+            BuildableName = "pizzaWatch WatchKit App.app"
+            BlueprintName = "pizzaWatch WatchKit App"
+            ReferencedContainer = "container:pizzaWatch.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F25FFFA1CAD40F40091B4E0"
+            BuildableName = "pizzaWatch WatchKit App.app"
+            BlueprintName = "pizzaWatch WatchKit App"
+            ReferencedContainer = "container:pizzaWatch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
