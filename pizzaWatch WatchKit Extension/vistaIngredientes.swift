@@ -39,12 +39,9 @@ class vistaIngredientes: WKInterfaceController {
         self.seleccionadosLabel.setText("Selecionados: \(String(ingredientesSeleccionados))")
         self.restantesLabel.setText("Restantes: \(String(ingredientesRestantes))")
         
-        if ingredientesSeleccionados > 0 {
-            self.siguienteBoton.setHidden(self.pizza.verModoEdicion())
-        }else{
-            self.siguienteBoton.setHidden(true)
-            
-        }
+        
+        self.siguienteBoton.setHidden(self.pizza.verModoEdicion())
+        
 
     }
 
@@ -88,12 +85,7 @@ class vistaIngredientes: WKInterfaceController {
         self.seleccionadosLabel.setText("Selecionados: \(String(ingredientesSeleccionados))")
         self.restantesLabel.setText("Restantes: \(String(ingredientesRestantes))")
         
-        if ingredientesSeleccionados > 0 {
-            self.siguienteBoton.setHidden(self.pizza.verModoEdicion())
-        }else{
-            self.siguienteBoton.setHidden(true)
-            
-        }
+        self.siguienteBoton.setHidden(self.pizza.verModoEdicion())
     }
     
     
